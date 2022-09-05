@@ -3,9 +3,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-development:
+transit_development:
   <<: *default
-  database: db/development.sqlite3
+  database: db/transit_development.sqlite3
 
 test:
   <<: *default
