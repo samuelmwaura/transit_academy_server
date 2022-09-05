@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_05_134702) do
+ActiveRecord::Schema.define(version: 2022_09_05_163604) do
+
+  create_table "allocations", force: :cascade do |t|
+    t.integer "teacher_id"
+    t.integer "courses_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "course_name"
