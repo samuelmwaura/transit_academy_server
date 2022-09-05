@@ -10,11 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_05_093907) do
+ActiveRecord::Schema.define(version: 2022_09_05_134702) do
+
+  create_table "courses", force: :cascade do |t|
+    t.string "course_name"
+    t.string "course_code"
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.string "student_name"
+    t.string "course_name"
+    t.integer "student_id"
+    t.integer "courses_id"
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "registration_number"
+    t.integer "age"
+  end
+
+  create_table "teachers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "staff_no"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password"
+    t.string "category"
   end
 
 end
