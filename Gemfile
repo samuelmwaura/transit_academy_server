@@ -8,6 +8,10 @@ gem "sinatra", "~> 2.1"
 # https://github.com/macournoyer/thin
 gem "thin", "~> 1.8"
 
+# Used to generate seed data
+# https://github.com/faker-ruby/faker
+gem "faker", "~> 2.18"
+
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
 gem "rack-contrib", "~> 2.3"
@@ -35,7 +39,7 @@ gem "sqlite3", "~> 1.4"
 gem "require_all", "~> 3.0"
 
 # These gems will only be used when we are running the application locally
-group :development do
+group :transit_development do
   gem "pry", "~> 0.14.1"
 
   # Automatically reload when there are changes

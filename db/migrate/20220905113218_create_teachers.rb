@@ -3,7 +3,7 @@ class CreateTeachers < ActiveRecord::Migration[6.1]
     create_table(:teachers) do |t|
       t.string(:first_name)
       t.string(:last_name)
-      t.string(:staff_no)
+      t.string(:staff_number)
     end
   end
 end
