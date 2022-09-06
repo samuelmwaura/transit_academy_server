@@ -5,12 +5,12 @@ class ApplicationController < Sinatra::Base
 
   ###ROUTES FOR THE STUDENTS MODEL
   get "/students" do
-    Student.all.to_json
+    Student.all.to_json  #working class method
   end
 
   get "/students/:id" do
     id = params[:id]
-    Student.find(id).to_json
+    Student.find(id).get_student_and_registrations   #Am calling an instance method for a student I fetch
   end
 
   post "/students" do
@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
 
   get "/teachers/:id" do
     id = params[:id]
-    Teacher.find(id).to_json
+    Teacher.find(id).get_teacher_and_allocations
   end
 
   post "/teachers" do
@@ -67,7 +67,12 @@ class ApplicationController < Sinatra::Base
 
    get "/courses/:id" do
     id = params[:id]
-    Course.find(id).to_json
+    Course.find(id).get_course_and_its_students
+   end
+
+   get "/courses/:id/allocations" do
+    id=params[:id]
+    Course.find(id).get_course_and_its_teachers
    end
 
    post "/courses" do

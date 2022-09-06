@@ -4,11 +4,9 @@ class Student < ActiveRecord::Base
     has_many(:registrations)
     has_many(:courses,through: :registrations)
     
-    def get_all_students
-      self.all
+    #get all information for a student instance
+    def get_student_and_registrations
+      self.to_json(include: {registrations: {include: :course}})
     end
 
-    def get_a_student_teachers
-       self.courses
-    end
 end
