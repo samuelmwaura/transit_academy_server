@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(version: 2022_09_05_163604) do
     t.string "username"
     t.string "password"
     t.string "category"
+    t.integer "student_id"
+    t.integer "teacher_id"
   end
 
 end

@@ -4,6 +4,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string(:username)
       t.string(:password)
       t.string(:category)
+      t.integer(:student_id)
+      t.integer(:teacher_id)
     end
   end
 end
