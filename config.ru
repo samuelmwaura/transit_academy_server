@@ -14,5 +14,6 @@ use Rack::JSONBodyParser
 # Our application  - Setting the controllers that listen to requests
 use TeacherController
 use CourseController
-run StudentController
+use StudentController
+run ApplicationController
 
