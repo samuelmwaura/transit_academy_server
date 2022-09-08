@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
                 Teacher.find(logged_user.teacher_id).get_teacher_and_allocations
             end
       else
-            nil
+            nil.to_json
       end
     
     end
