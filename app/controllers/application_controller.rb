@@ -14,4 +14,15 @@ class ApplicationController < Sinatra::Base
       end
     
     end
+     
+
+##Registrattion routes  ..Tbh I just dont know how I got this logic but it is just genious
+    patch "/registrations/:id" do
+      updating_registration = Registration.find(params[:id])
+      new_course = Course.find(params[:course_id])
+      updating_registration.update(id:params[:id],course_name: new_course.course_name,course_id: new_course.id) #updating the id so that it becomes first in list
+      updating_registration.to_json(include: :course)
+    end
+
+
 end
