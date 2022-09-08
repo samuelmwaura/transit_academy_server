@@ -23,6 +23,11 @@ class ApplicationController < Sinatra::Base
       updating_registration.update(id:params[:id],course_name: new_course.course_name,course_id: new_course.id) #updating the id so that it becomes first in list
       updating_registration.to_json(include: :course)
     end
+   
 
+    post "/registrations" do
+      new_registration = Registration.create(student_name:params[:student_name],course_name:params[:course_name],student_id:params[:student_id],course_id:params[:course_id].to_i)
+      new_registration.to_json
+    end
 
 end
