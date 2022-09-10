@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
             logged_user = if logging_user.category == "student"
                 Student.find(logging_user.student_id).get_student_and_registrations
             else
-                Teacher.find(logged_user.teacher_id).get_teacher_and_allocations
+                Teacher.find(logging_user.teacher_id).get_teacher_and_allocations
             end
       else
             nil.to_json
@@ -27,7 +27,13 @@ class ApplicationController < Sinatra::Base
 
     post "/registrations" do
       new_registration = Registration.create(student_name:params[:student_name],course_name:params[:course_name],student_id:params[:student_id],course_id:params[:course_id].to_i)
-      new_registration.to_json
+      new_registration.to_json(include: :course) #include the course because it is needed in the frontend.
+    end
+
+    delete "/registrations/:id" do
+      deleted_registration = Registration.find(params[:id])
+      deleted_registration.destroy
+      deleted_registration.to_json
     end
 
 end
