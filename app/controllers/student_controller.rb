@@ -5,6 +5,11 @@ class StudentController < Sinatra::Base
     Student.all.to_json  #working class method
   end
 
+  get "/students/payments/:id" do   
+    student_payment = Student.find(params[:id])
+    student_payment.to_json(include: :payments)
+  end
+
   get "/students/:id" do
     id = params[:id]
     Student.find(id).get_student_and_registrations   #Am calling an instance method for a student I fetch
