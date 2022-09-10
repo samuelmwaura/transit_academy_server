@@ -6,8 +6,10 @@ class ApplicationController < Sinatra::Base
       if logging_user
             logged_user = if logging_user.category == "student"
                 Student.find(logging_user.student_id).get_student_and_registrations
-            else
+            elsif logging_user.category == "teacher"
                 Teacher.find(logging_user.teacher_id).get_teacher_and_allocations
+            else
+                logging_user.to_json
             end
       else
             nil.to_json
