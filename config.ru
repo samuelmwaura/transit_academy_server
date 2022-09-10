@@ -15,5 +15,6 @@ use Rack::JSONBodyParser
 use TeacherController
 use CourseController
 use StudentController
+use PaymentController
 run ApplicationController
 
