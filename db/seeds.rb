@@ -14,7 +14,7 @@ end
 student = Student.find(rand(1..12))
 course = Course.find(rand(1..12))
 teacher = Teacher.find(rand(1..12))
-Registration.create(student_name:"#{student.first_name} #{student.last_name}",course_name:course.course_name,student_id:student.id,course:course)
+Registration.create(student_name:"#{student.first_name} #{student.last_name}",course_name:course.course_name,grade:"Not Graded",gstudent_id:student.id,course:course)
 Allocation.create(teacher:teacher,course:course)
 Payment.create(student_name:"#{student.first_name} #{student.last_name}",amount:rand(24000..78000),student:student)
 end
