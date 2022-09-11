@@ -38,4 +38,11 @@ class ApplicationController < Sinatra::Base
       deleted_registration.to_json
     end
 
+    post "/registrations/grades" do
+      params.each do |key,value| #params here is a hash of keys representing registration ids and values repesenting grades
+        grading_student = Registration.find(key.to_i)
+        grading_student.update(grade:value)
+      end
+      params.to_json
+    end
 end
