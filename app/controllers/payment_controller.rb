@@ -6,4 +6,9 @@ class PaymentController < Sinatra::Base
     payments.to_json
    end
 
+   post "/payments" do
+    new_payment=Payment.create(student_name:params[:student_name],amount:params[:amount],student_id:params[:student_id])
+    new_payment.to_json
+   end
+
 end
