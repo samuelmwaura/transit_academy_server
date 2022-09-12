@@ -12,9 +12,9 @@ Once logged into the system, a student accesses a dashboard that has three cards
 The registration table also shows grades for the various units they have registered for. For those registrations that are already graded, the student cannot tamper with them. The payments tab for the student account contains a table that shows the payments that the student has done in the semester and the specific day when the payment was made.
 
 <p float="left">
-  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentDashboard.png" width="350" height="200"/>
-  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentRegistration.png" width="350" height="200"/> 
-  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentPayment.png" width="350" height="200"/>
+  <img src="./demos/studentDashboard.png" width="350" height="200"/>
+  <img src="./demos/studentRegistration.png" width="350" height="200"/> 
+  <img src="./demos/studentPayment.png" width="350" height="200"/>
 </p>
 
 ### 2.Teacher.
