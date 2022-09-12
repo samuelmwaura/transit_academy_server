@@ -1,124 +1,83 @@
-# Phase 3 Project Guidelines
+# Transit Academy Registry.
 
-## Learning Goals
+` Transit Academy Registry` is a complimentary service application for Transit academy students and staff that include teachers and finance staff. A teacher in the academy is allocated courses by the school to teach which the students register to attend. The students are responsible of initiating their own registrations and making adjustments that include editing the registrations, deleting the registrations provided they have done payments for the courses and the deadline day is not yet.
 
-- Build a web basic API with Sinatra and Active Record to support a React
-  frontend
+A finance officer in the academy enters payment records to the school database which captures the student name  and the amount, the date created and the last date of payment update. The application has three categories of users,i.e students, teachers and the finance team each of who logs in with their preset changeable credentials.
 
-## Introduction
+## Using the App.
 
-Congrats on getting through all the material for Phase 3! Now's the time to put
-it all together and build something from scratch to reinforce what you know and
-expand your horizons.
+### 1. Student.
+Once logged into the system, a student accesses a dashboard that has three cards for summaries.The cards represent the number of registered courses, the likely cumulative number of teachers that could teach in all those courses where a course has two alternatives for teachers and the cumulative payments for the semester.Besides, the dashboard shows the student the courses that are currently on offer in the academy and from which they can choose the ones to register.
 
-The focus of this project is **building a Sinatra API backend** that uses
-**Active Record** to access and persist data in a database, which will be used
-by a separate **React frontend** that interacts with the database via the API.
+The registration table also shows grades for the various units they have registered for. For those registrations that are already graded, the student cannot tamper with them. The payments tab for the student account contains a table that shows the payments that the student has done in the semester and the specific day when the payment was made.
 
-## Requirements
+<p float="left">
+  <img src="./public/demos/studentDashboard.png" width="350" height="200"/>
+  <img src="./public/demos/studentRegistration.png" width="350" height="200"/> 
+  <img src="./public/demos/studentPayment.png" width="350" height="200"/>
+</p>
 
-For this project, you must:
+### 2.Teacher.
+A Teacher account has the dashboard and the grading panel.In the dashboard, the teacher has 2 summary cards one with their total allocated courses for the semester and the other has the total student audience for all the allocated courses i.e. the cumulative number of students who have registered for all the courses allocated to the teacher for the semester. Besides the summares, a teacher can see the specifics of the courses allocated to them as well as see the courses' registered students' details.
 
-- Use Active Record to interact with a database.
-- Have at least two models with a one-to-many relationship.
-- At a minimum, set up the following API routes in Sinatra:
-  - create and read actions for both models
-  - full CRUD capability for one of the models
-- Build a separate React frontend application that interacts with the API to
-  perform CRUD actions.
-- Use good OO design patterns. You should have separate classes for each of your
-  models, and create instance and class methods as necessary.
+In the grading panel, a teacher is able to choose a course and get the list of the students registered for that course with an option to grade them. For registrations already graded the teacher cannot tamper with those.
 
-For example, build a todo list application with a React frontend interface and a
-Sinatra backend API, where a user can:
+<p float="left">
+  <img src="./public/demos/teacherDashboard.png" width="330" height="200"/>
+  <img src="./public/demos/teacherGrading.png" width="330" height="200"/> 
+</p>
 
-- **Create** a new todo
-- **Read** a list of all todos
-- **Update** an individual todo
-- **Delete** a todo
+### 3. Finance Staff.
 
-A `Todo` can be tagged with a `Category`, so that each todo _belongs to_ a
-category and each category _has many_ todos.
+The finance team has a sole responsibility of creating payments in the system for students who bring invoices. They are able to choose from the database of students. They also can search/filter payments by a given student.
 
-## Getting Started
+  <img src="./public/demos/financeView.png" width="315" height="200"/>
 
-### Backend Setup
+## Technologies.
 
-This repository has all the starter code needed to get a Sinatra backend up and
-running. [**Fork and clone**][fork link] this repository to get started. Then, run
-`bundle install` to install the gems.
+The following are the technologies that have been used to realize this project:
+  
+  1. React Js
+  2. CSS
+  3. Backend Powered by a ruby Sinatra app.
 
-**Important**: Be sure you fork a copy of the repo into your GitHub account
-before cloning it. You can do this by using the link above or by clicking the
-"Octocat" button at the top of this page, then clicking "Fork" in the upper
-right corner of the repo page.
+The project backend is built using `ruby sinatra framework` that uses the `ActiveRecord` Object Relational Mapper' to interact with the database.Sinatra is a lightweight web server framework that abstracts the basic routing functionalities.
 
-[fork link]: https://github.com/learn-co-curriculum/phase-3-sinatra-react-project/fork
+## System Acess
 
-The `app/controllers/application_controller.rb` file has an example GET route
-handler. Replace this route with routes for your project.
+Mess around  the project as a student using the username `Dudley13` and `Dudley` as the password.
 
-You can start your server with:
+## Accessing the hosted project.
+   
+This project is hosted in a model of halves. This frontend that is built using React.js is hosted on `Netlify` while the powering `Ruby Sinatra App` is hosted on `Heroku`.
 
-```console
-$ bundle exec rake server
-```
+The project can be accessed live at [Transist Registry.]().
 
-This will run your server on port
-[http://localhost:9292](http://localhost:9292).
+  ## Get a copy/ personify.
 
-### Frontend Setup
+The following is the process of getting your own copy of the project.
 
-Your backend and your frontend should be in **two different repositories**.
+`Transit Registry` is  verion-controlled in two different github repositories, one for the backend `https://github.com/samuelmwaura/transit_academy_server` and the other carrying the app interface `https://github.com/samuelmwaura/transit_academy_client`;
 
-Create a new repository in a **separate folder** with a React app for your
-frontend. To do this, `cd` out of the backend project directory, and use
-[create-react-app][] to generate the necessary code for your React frontend:
+To get copies of each:
+   1. Navigate to the main project's github repo via the link, `https://github.com/samuelmwaura/triadhealth`
+   2. Click the fork button to fork it to your personal github account.
+   3. Once you have a copy in your github account,copy the ssh url -`git@github.com:samuelmwaura/transit_academy_client.git` or the https - `https://github.com/samuelmwaura/transit_academy_client.git` depending on the preference and the github access configuration of your machine.
+   3. Open your terminal (Unix OSs are the presumed operating system for your computer.For any other operating systems, the instruction might be different) and navigate to the folder your desire the project to be located
 
-```console
-$ npx create-react-app my-app-frontend
-```
+   Use the following command to clone the project locally.
+   ```bash
+   git clone preferred url;
+   ```
+  Once the project user interface has been cloned to the local machine, navigate to the created project directory , `cd "Project Directory"`.Open your code editor in this folder to access the project sourcecode.Before beginning to edit the files, run `npm install` to install all the dependencies and later `npm start` to launch the app in the browser.Begin editing the files.
 
-After creating the project locally, you should also
-[create a repository on GitHub][create repo] to host your repo and help
-collaborate, if you're working with a partner.
+  Follow the above process for the backend at `https://github.com/samuelmwaura/transit_academy_server`.Once you open the project in the code editor window, `run bundle` install to install the project dependencies and start editing.
 
-### Fetch Example
 
-Your React app should make fetch requests to your Sinatra backend! Here's an
-example:
+     
+   ## License.
+   This project is under the MIT GRO  licenses:
 
-```js
-fetch("http://localhost:9292/test")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-```
+   [MIT](https://choosealicense.com/licenses/mit/)
 
-## Project Tips
 
-- This project is intended to focus more on the backend than the frontend, so
-  try and keep the React side of things relatively simple. Focus on working with
-  Active Record and performing CRUD actions. What are some interesting queries you can write? What kinds of questions can you ask of your data?
-- Once you have a project idea, come up with a domain model and decide what
-  relationships exist between the models in your application. Use a tool like
-  [dbdiagram.io][] to help visualize your models.
-- Decide on your API endpoints. What data should they return? What kind of CRUD
-  action should they perform? What data do they need from the client?
-- Use [Postman][postman download] to test your endpoints.
-- Use `binding.pry` to debug your requests on the server. It's very helpful to use a
-  `binding.pry` in your controller within a route to see what `params` are being
-  sent.
-- Use the [Network Tab in the Dev Tools][network tab] in the frontend to debug
-  your requests.
-
-## Resources
-
-- [create-react-app][]
-- [dbdiagram.io][]
-- [Postman][postman download]
-
-[create-react-app]: https://create-react-app.dev/docs/getting-started
-[create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
-[dbdiagram.io]: https://dbdiagram.io/
-[postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
