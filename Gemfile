@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "2.7.4"
 
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
@@ -47,10 +48,9 @@ group :transit_development do
   gem "rerun"
 end
 
-# These gems will only be used when we are running tests
-group :test do
-  gem "database_cleaner", "~> 2.0"
-  gem "rack-test", "~> 1.1"
-  gem "rspec", "~> 3.10"
-  gem "rspec-json_expectations", "~> 2.2"
+gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
+
+# These gems will only when the app is deployed
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end
