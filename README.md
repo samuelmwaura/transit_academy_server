@@ -12,9 +12,9 @@ Once logged into the system, a student accesses a dashboard that has three cards
 The registration table also shows grades for the various units they have registered for. For those registrations that are already graded, the student cannot tamper with them. The payments tab for the student account contains a table that shows the payments that the student has done in the semester and the specific day when the payment was made.
 
 <p float="left">
-  <img src="./public/demos/studentDashboard.png" width="350" height="200"/>
-  <img src="./public/demos/studentRegistration.png" width="350" height="200"/> 
-  <img src="./public/demos/studentPayment.png" width="350" height="200"/>
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentDashboard.png" width="350" height="200"/>
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentRegistration.png" width="350" height="200"/> 
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/studentPayment.png" width="350" height="200"/>
 </p>
 
 ### 2.Teacher.
@@ -23,15 +23,15 @@ A Teacher account has the dashboard and the grading panel.In the dashboard, the 
 In the grading panel, a teacher is able to choose a course and get the list of the students registered for that course with an option to grade them. For registrations already graded the teacher cannot tamper with those.
 
 <p float="left">
-  <img src="./public/demos/teacherDashboard.png" width="330" height="200"/>
-  <img src="./public/demos/teacherGrading.png" width="330" height="200"/> 
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/teacherDashboard.png" width="330" height="200"/>
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/teacherGrading.png" width="330" height="200"/> 
 </p>
 
 ### 3. Finance Staff.
 
 The finance team has a sole responsibility of creating payments in the system for students who bring invoices. They are able to choose from the database of students. They also can search/filter payments by a given student.
 
-  <img src="./public/demos/financeView.png" width="315" height="200"/>
+  <img src="https://github.com/samuelmwaura/transit_academy_client/tree/main/public/demos/financeView.png" width="315" height="200"/>
 
 ## Technologies.
 
