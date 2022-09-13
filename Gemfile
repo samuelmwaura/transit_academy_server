@@ -45,7 +45,7 @@ gem "require_all", "~> 3.0"
 
 #   # Automatically reload when there are changes
 #   # https://github.com/alexch/rerun
-# gem "rerun"
+#   #gem "rerun"
 # end
 
 gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
