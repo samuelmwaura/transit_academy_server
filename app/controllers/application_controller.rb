@@ -45,4 +45,10 @@ class ApplicationController < Sinatra::Base
       end
       params.to_json
     end
+  
+    get "/users" do
+      all_users = User.all
+      all_users.to_json
+    end
+
 end
