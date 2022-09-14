@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     end
      
 
-##Registrattion routes  ..Tbh I just dont know how I got this logic but it is just genious
+##Registration routes  ..Tbh I just dont know how I got this logic but it is just genious
     patch "/registrations/:id" do
       updating_registration = Registration.find(params[:id])
       new_course = Course.find(params[:course_id])
@@ -28,7 +28,7 @@ class ApplicationController < Sinatra::Base
    
 
     post "/registrations" do
-      new_registration = Registration.create(student_name:params[:student_name],course_name:params[:course_name],student_id:params[:student_id],course_id:params[:course_id].to_i)
+      new_registration = Registration.create(student_name:params[:student_name],course_name:params[:course_name],grade:"Not Graded",student_id:params[:student_id],course_id:params[:course_id].to_i)
       new_registration.to_json(include: :course) #include the course because it is needed in the frontend.
     end
 
